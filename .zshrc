@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # For brew, at least
@@ -81,10 +88,10 @@ plugins=(git )
 
 source $ZSH/oh-my-zsh.sh
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  #eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubblesextra.omp.json)"
-  eval "$(oh-my-posh init zsh --config ~/git/oh-my-posh/themes/bubbles_inverted.omp.json)"
-fi
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   #eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubblesextra.omp.json)"
+#   eval "$(oh-my-posh init zsh --config ~/git/oh-my-posh/themes/bubbles_inverted.omp.json)"
+# fi
 
 # User configuration
 
@@ -172,3 +179,8 @@ alias cd="z"
 # ---- Eza (better ls) -----
 
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
