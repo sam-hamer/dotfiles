@@ -214,10 +214,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open https://www.reddit.com"
+                    "shell_command": "open https://github.com/sam-hamer"
                   }
                 ],
-                "description": "Open https://www.reddit.com",
+                "description": "Open https://github.com/sam-hamer",
                 "type": "basic",
                 "from": {
                   "key_code": "r",
