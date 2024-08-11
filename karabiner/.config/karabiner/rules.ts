@@ -146,34 +146,6 @@ const rules: KarabinerRules[] = [
 
     // s = "System"
     s: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: "display_brightness_increment",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "display_brightness_decrement",
-          },
-        ],
-      },
       l: {
         to: [
           {
@@ -193,6 +165,14 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "fastforward",
+          },
+        ],
+      },
+      g: {
+        to: [
+          {
+            key_code: "2",
+            modifiers: ["right_shift", "right_command"],
           },
         ],
       },
