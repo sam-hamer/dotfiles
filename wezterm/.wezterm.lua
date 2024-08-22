@@ -7,7 +7,17 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Dracula (Official)'
+config = {
+    automatically_reload_config = true,
+    enable_tab_bar = false,
+    window_close_confirmation = "NeverPrompt",
+    window_decorations = "RESIZE", -- disable the title bar but enable resizable border
+    default_cursor_style = "BlinkingUnderline",
+    font = wezterm.font("Liga SFMono Nerd Font", {weight="Regular", stretch="Normal", style="Normal"}),
+    font_size = 14,
+    window_background_opacity = 0.9,
+    color_scheme = 'Palenight (Gogh)',
+}
 
 -- and finally, return the configuration to wezterm
 return config
