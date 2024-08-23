@@ -1,6 +1,6 @@
 # My dotfiles
 
-This directory contains the dotfiles for my system
+This directory contains the dotfiles and other information to configure my system.
 
 ## Requirements
 
@@ -16,6 +16,19 @@ brew install git
 
 ```
 brew install stow
+```
+
+### Starship
+
+```
+brew install starship
+```
+
+### SF Pro Mono Nerd Font Ligaturized
+
+```
+brew tap shaunsingh/SFMono-Nerd-Font-Ligaturized
+brew install --cask font-sf-mono-nerd-font-ligaturized
 ```
 
 ## Installation

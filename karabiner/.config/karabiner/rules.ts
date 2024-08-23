@@ -71,7 +71,7 @@ const rules: KarabinerRules[] = [
       g: app("Google Chrome"),
       c: app("Visual Studio Code"),
       d: app("Discord"),
-      t: app("iTerm"),
+      t: app("Wezterm"),
       f: app("Finder"),
       // "i"Message
       i: app("Messages"),

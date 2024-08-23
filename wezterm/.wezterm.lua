@@ -17,6 +17,26 @@ config = {
     font_size = 14,
     window_background_opacity = 0.9,
     color_scheme = 'Palenight (Gogh)',
+    background = {
+        {
+          source = {
+            File = "/Users/samhamer/Library/Mobile Documents/com~apple~CloudDocs/Mac_Wallpapers/macos-monterey.jpg",
+          },
+          hsb = {
+            hue = 1.0,
+            saturation = 1.02,
+            brightness = 0.25,
+          },
+        },
+        {
+          source = {
+            Color = "#282c35",
+          },
+          width = "100%",
+          height = "100%",
+          opacity = 0.55,
+        },
+      },
 }
 
 -- and finally, return the configuration to wezterm
