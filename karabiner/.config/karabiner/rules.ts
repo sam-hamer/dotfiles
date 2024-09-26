@@ -115,24 +115,8 @@ const rules: KarabinerRules[] = [
       l: open("-g raycast://extensions/raycast/window-management/right-half"),
       f: open("-g raycast://extensions/raycast/window-management/maximize"),
       c: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
-      u: {
-        description: "Window: Previous Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
-          },
-        ],
-      },
-      i: {
-        description: "Window: Next Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control"],
-          },
-        ],
-      },
+      u: open("-g raycast://extensions/raycast/window-management/make-smaller"),
+      i: open("-g raycast://extensions/raycast/window-management/make-larger"),
       n: {
         description: "Window: Next Window",
         to: [

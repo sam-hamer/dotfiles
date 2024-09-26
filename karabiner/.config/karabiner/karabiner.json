@@ -893,16 +893,12 @@
                 ]
               },
               {
-                "description": "Window: Previous Tab",
                 "to": [
                   {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "right_control",
-                      "right_shift"
-                    ]
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-smaller"
                   }
                 ],
+                "description": "Open -g raycast://extensions/raycast/window-management/make-smaller",
                 "type": "basic",
                 "from": {
                   "key_code": "u",
@@ -921,15 +917,12 @@
                 ]
               },
               {
-                "description": "Window: Next Tab",
                 "to": [
                   {
-                    "key_code": "tab",
-                    "modifiers": [
-                      "right_control"
-                    ]
+                    "shell_command": "open -g raycast://extensions/raycast/window-management/make-larger"
                   }
                 ],
+                "description": "Open -g raycast://extensions/raycast/window-management/make-larger",
                 "type": "basic",
                 "from": {
                   "key_code": "i",
