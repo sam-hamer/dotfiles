@@ -51,6 +51,8 @@
           enable = true;
           brews = [
             "mas"
+            "git"
+            "gh"
           ];
           casks = [
             "zen-browser"
