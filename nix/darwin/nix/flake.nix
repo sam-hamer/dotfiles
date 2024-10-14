@@ -58,9 +58,10 @@
             "zen-browser"
             "karabiner-elements"
           ];
-          masApps = {
-          };
+          masApps = { };
           onActivation.cleanup = "zap";
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
         };
 
         fonts.packages = with pkgs; [
@@ -68,6 +69,20 @@
           (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
         ];
 
+        system.defaults = {
+          dock.autohide = true;
+          dock.persistent-apps = [
+            "/Applications/Zen Browser.app"
+            "/System/Applications/Mail.app"
+            "/System/Applications/Calendar.app"
+            "${pkgs.wezterm}/Applications/Wezterm.app"
+            "${pkgs.vscode}/Applications/Visual Studio Code.app"
+          ];
+          finder.FXPreferredViewStyle = "clmv";
+          NSGlobalDomain.AppleInterfaceStyle = "Dark";
+        };
+
+        # This is for adding alias instead of symlink for applications for Spotlight
         # system.activationScripts.applications.text =
         #   let
 
@@ -119,7 +134,8 @@
       darwinConfigurations."Sams-Mac-mini" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          nix-homebrew.darwinModules.nix-homebrew {
+          nix-homebrew.darwinModules.nix-homebrew
+          {
             nix-homebrew = {
               enable = true;
               # Apple Silicon Only
