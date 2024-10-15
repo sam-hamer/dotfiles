@@ -71,6 +71,11 @@
 
         system.defaults = {
           dock.autohide = true;
+          dock.autohide-delay = 0.05;
+          dock.autohide-time-modifier = 0.3;
+          dock.mru-spaces = false;
+          dock.show-recents = false;
+          dock.tilesize = 48;
           dock.persistent-apps = [
             "/Applications/Zen Browser.app"
             "/System/Applications/Mail.app"
@@ -80,6 +85,10 @@
           ];
           finder.FXPreferredViewStyle = "clmv";
           NSGlobalDomain.AppleInterfaceStyle = "Dark";
+          NSGlobalDomain.AppleShowAllExtensions = true;
+          NSGlobalDomain._HIHideMenuBar = false;
+          NSGlobalDomain.AppleShowAllFiles = true;
+          NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
         };
 
         # This is for adding alias instead of symlink for applications for Spotlight
