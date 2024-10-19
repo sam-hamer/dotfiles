@@ -39,7 +39,6 @@
         environment.systemPackages =
           [
             pkgs.neovim
-            okgs.obsidian
             pkgs.wezterm
             pkgs.vscode
             pkgs.raycast
@@ -64,16 +63,8 @@
           casks = [
             "zen-browser"
             "karabiner-elements"
-            "bartender"
-            "stats"
-            "discord"
-            "bitwarden"
-            "shottr"
-            "todoist"
           ];
-          masApps = { 
-            "Dropover" = 1355679052;
-          };
+          masApps = { };
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;

@@ -1,7 +1,7 @@
 # ----- NVM Path -----
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-source ~/.nvm/nvm.sh
+# export NVM_DIR="$HOME/.nvm"
+# . "$(brew --prefix nvm)/nvm.sh"
+# source ~/.nvm/nvm.sh
 
 # ----- Load Plugins -----
 # Standard plugins can be found in $ZSH/plugins/
