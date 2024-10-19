@@ -40,11 +40,17 @@
           [
             pkgs.neovim
             pkgs.wezterm
-
             pkgs.vscode
             pkgs.raycast
             pkgs.nixd
             pkgs.nixpkgs-fmt
+            pkgs.starship
+            pkgs.fzf
+            pkgs.eza
+            pkgs.zoxide
+            pkgs.thefuck
+            pkgs.zsh-syntax-highlighting
+            pkgs.zsh-autosuggestions
           ];
 
         homebrew = {
@@ -88,7 +94,8 @@
           NSGlobalDomain.AppleShowAllExtensions = true;
           NSGlobalDomain._HIHideMenuBar = false;
           NSGlobalDomain.AppleShowAllFiles = true;
-          NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
+          loginwindow.GuestEnabled = false;
+          trackpad.Clicking = true;
         };
 
         # This is for adding alias instead of symlink for applications for Spotlight
