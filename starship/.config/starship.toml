@@ -43,6 +43,8 @@ style = 'fg:red'
 ahead = '⇡${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
+stashed = '󱧩'
+staged = '[++\($count\)](green)'
 
 [fill]
 symbol = ''

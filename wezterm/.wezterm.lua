@@ -58,7 +58,7 @@ config = {
     background = {
         {
           source = {
-            File = "/Users/sam/wallpapers/macos-monterey.jpg",
+            File = "/Users/samhamer/wallpapers/macos-monterey.jpg",
           },
           hsb = {
             hue = 1.0,
