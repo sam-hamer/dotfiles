@@ -92,9 +92,15 @@
           dock.show-recents = false;
           dock.tilesize = 48;
           dock.persistent-apps = [
-            "/Applications/Zen Browser.app"
-            "/System/Applications/Mail.app"
+            "/System/Library/CoreServices/Finder.app"
+            "/System/Applications/System Settings.app"
             "/System/Applications/Calendar.app"
+            "/System/Applications/Mail.app"
+            "/System/Applications/Messages.app"
+            "/Applications/Discord.app"
+            "${pkgs.obsidian}/Applications/Obsidian.app"
+            "/Applications/Safari.app"
+            "/Applications/Zen Browser.app"
             "${pkgs.wezterm}/Applications/Wezterm.app"
             "${pkgs.vscode}/Applications/Visual Studio Code.app"
           ];
