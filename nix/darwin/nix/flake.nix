@@ -38,28 +38,35 @@
 
         environment.systemPackages =
           [
-            pkgs.neovim
-            okgs.obsidian
+            # pkgs.neovim
+            pkgs.obsidian
             pkgs.wezterm
             pkgs.vscode
-            pkgs.raycast
             pkgs.nixd
             pkgs.nixpkgs-fmt
             pkgs.starship
-            pkgs.fzf
-            pkgs.eza
-            pkgs.zoxide
-            pkgs.thefuck
-            pkgs.zsh-syntax-highlighting
-            pkgs.zsh-autosuggestions
+            # pkgs.fzf
+            # pkgs.eza
+            # pkgs.zoxide
+            # pkgs.thefuck
+            # pkgs.zsh-syntax-highlighting
+            # pkgs.zsh-autosuggestions
           ];
 
         homebrew = {
           enable = true;
           brews = [
             "mas"
+            "nvm"
             "git"
             "gh"
+            "fzf"
+            "eza"
+            "zoxide"
+            "thefuck"
+            "zsh-syntax-highlighting"
+            "zsh-autosuggestions"
+            "neovim"
           ];
           casks = [
             "zen-browser"
@@ -67,9 +74,14 @@
             "bartender"
             "stats"
             "discord"
-            "bitwarden"
+            "1password"
+            "1password-cli"
             "shottr"
             "todoist"
+            "linearmouse"
+            "raycast"
+            "cursor"
+            "linearmouse"
           ];
           masApps = { 
             "Dropover" = 1355679052;
@@ -92,7 +104,6 @@
           dock.show-recents = false;
           dock.tilesize = 48;
           dock.persistent-apps = [
-            "/System/Library/CoreServices/Finder.app"
             "/System/Applications/System Settings.app"
             "/System/Applications/Calendar.app"
             "/System/Applications/Mail.app"

@@ -17,7 +17,7 @@ config = {
     font = wezterm.font("Liga SFMono Nerd Font", {weight="Regular", stretch="Normal", style="Normal"}),
     font_size = 14,
     window_background_opacity = 0.9,
-    color_scheme = 'bearded-arc',
+    color_scheme = 'anysphere',
     color_schemes = {
       ["bearded-arc"] = {
         foreground = "#d0d7e4",
@@ -52,6 +52,69 @@ config = {
           [17] = "#d6d6d6", -- Bold Color
           [18] = "#69c3ff", -- Link Color
         },
+      },
+      ["anysphere"] = {
+        -- The default text color
+        foreground = "#D6D6DD",
+        -- The default background color
+        background = "#181818",
+
+        -- Overrides the cell background color when the current cell is occupied by the
+        -- cursor and the cursor style is set to Block
+        cursor_bg = "#D6D6DD",
+        -- Overrides the text color when the current cell is occupied by the cursor
+        cursor_fg = "#181818",
+        -- Specifies the border color of the cursor when the cursor style is set to Block,
+        -- or the color of the vertical or horizontal bar when the cursor style is set to
+        -- Bar or Underline.
+        cursor_border = "#D6D6DD",
+
+        -- the foreground color of selected text
+        selection_fg = "#D6D6DD",
+        -- the background color of selected text
+        selection_bg = "#163761",
+
+        -- Colors for search matches
+        search_bar_fg = "#D6D6DD",
+        search_bar_bg = "#4F4F82",
+
+        -- The color of the scrollbar "thumb"; the portion that represents the current viewport
+        scrollbar_thumb = "#737373",
+
+        -- The color of the split lines between panes
+        split = "#737373",
+
+        ansi = {
+          "#181818", -- black
+          "#FF6767", -- red
+          "#68E868", -- green
+          "#EBC88D", -- yellow
+          "#94C1FA", -- blue
+          "#E394DC", -- magenta
+          "#83D6C5", -- cyan
+          "#D6D6DD", -- white
+        },
+        brights = {
+          "#6D6D6D", -- bright black
+          "#FFB3B3", -- bright red
+          "#6AE96A", -- bright green
+          "#F8C762", -- bright yellow
+          "#C7C7FF", -- bright blue
+          "#FDA5FF", -- bright magenta
+          "#82D2CE", -- bright cyan
+          "#FFFFFF", -- bright white
+        },
+
+        -- Colors for copy_mode and quick_select
+        -- available since: 20220807-113146-c2fee766
+        -- In copy_mode, the color of the active text selection
+        copy_mode_active_highlight_bg = { Color = "#163761" },
+        -- In copy_mode, the color of inactive text selections
+        copy_mode_inactive_highlight_bg = { Color = "#292929" },
+        -- The color of the quick select labels
+        quick_select_label_bg = { Color = "#163761" },
+        -- The color of the quick select label text
+        quick_select_label_fg = { Color = "#D6D6DD" },
       },
   },
 
