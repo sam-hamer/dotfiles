@@ -76,10 +76,11 @@ const rules: KarabinerRules[] = [
       // "i"Message
       i: app("Messages"),
       a: app("Arc"),
+      b: app("Zen"),
       p: app("Music"),
       m: app("Mail"),
       n: app("Obsidian"),
-      w: app("Todoist"),
+      w: app("TickTick"),
     },
 
     // TODO: This doesn't quite work yet.
