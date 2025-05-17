@@ -1,1 +1,6 @@
 node_modules
+automatic_backups
+.DS_Store
+.eslintcache
+*.log*
+.env
