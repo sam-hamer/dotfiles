@@ -56,9 +56,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/doist/todoist/create-task"
-    ),
+    spacebar: open("raycast://extensions/doist/todoist/create-task"),
     // b = "B"rowse
     b: {
       y: open("https://www.youtube.com"),
@@ -76,7 +74,7 @@ const rules: KarabinerRules[] = [
       // "i"Message
       i: app("Messages"),
       a: app("Arc"),
-      b: app("Zen"),
+      b: app("Zen Browser"),
       p: app("Music"),
       m: app("Mail"),
       n: app("Obsidian"),
@@ -109,16 +107,42 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      y: open("-g raycast://extensions/raycast/window-management/previous-display"),
+      y: open(
+        "-g raycast://extensions/raycast/window-management/previous-display"
+      ),
       o: open("-g raycast://extensions/raycast/window-management/next-display"),
-      k: open("-g raycast://extensions/raycast/window-management/top-half"),
-      j: open("-g raycast://extensions/raycast/window-management/bottom-half"),
       h: open("-g raycast://extensions/raycast/window-management/left-half"),
       l: open("-g raycast://extensions/raycast/window-management/right-half"),
       f: open("-g raycast://extensions/raycast/window-management/maximize"),
-      c: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
-      u: open("-g raycast://extensions/raycast/window-management/make-smaller"),
-      i: open("-g raycast://extensions/raycast/window-management/make-larger"),
+      c: open(
+        "-g raycast://extensions/raycast/window-management/almost-maximize"
+      ),
+      u: open(
+        "-g raycast://extensions/raycast/window-management/top-left-quarter"
+      ),
+      i: open(
+        "-g raycast://extensions/raycast/window-management/top-right-quarter"
+      ),
+      j: open(
+        "-g raycast://extensions/raycast/window-management/bottom-left-quarter"
+      ),
+      k: open(
+        "-g raycast://extensions/raycast/window-management/bottom-right-quarter"
+      ),
+      t: open(
+        "-g raycast://extensions/raycast/window-management/reasonable-size"
+      ),
+      r: open("-g raycast://extensions/raycast/window-management/restore"),
+      m: open(
+        "-g raycast://extensions/raycast/system/hide-all-apps-except-frontmost"
+      ),
+      q: open("-g raycast://extensions/raycast/system/quit-all-applications"),
+      comma: open(
+        "-g raycast://extensions/raycast/window-management/make-larger"
+      ),
+      period: open(
+        "-g raycast://extensions/raycast/window-management/make-smaller"
+      ),
       n: {
         description: "Window: Next Window",
         to: [
@@ -162,7 +186,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      
+
       // "T"heme
       t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
