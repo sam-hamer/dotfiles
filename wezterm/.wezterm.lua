@@ -75,8 +75,8 @@ config = {
         selection_bg = "#163761",
 
         -- Colors for search matches
-        search_bar_fg = "#D6D6DD",
-        search_bar_bg = "#4F4F82",
+        -- search_bar_fg = "#D6D6DD",
+        -- search_bar_bg = "#4F4F82",
 
         -- The color of the scrollbar "thumb"; the portion that represents the current viewport
         scrollbar_thumb = "#737373",
@@ -121,7 +121,7 @@ config = {
     background = {
         {
           source = {
-            File = "/Users/sam/wallpapers/macos-monterey.jpg",
+            File = wezterm.home_dir .. "/.config/wallpapers/macos-monterey.jpg",
           },
           hsb = {
             hue = 1.0,
