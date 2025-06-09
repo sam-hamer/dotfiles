@@ -3,9 +3,54 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define the Hyper key itself
+  // External keyboard with firmware-level Hyper key
   {
-    description: "Hyper Key (⌃⌥⇧⌘)",
+    description: "External Keyboard - Hyper Key (⌃⌥⇧⌘)",
+    manipulators: [
+      {
+        description: "Hyper Key Variable (External)",
+        from: {
+          simultaneous: [
+            { key_code: "left_command" },
+            { key_code: "left_control" },
+            { key_code: "left_option" },
+            { key_code: "left_shift" },
+          ],
+        },
+        to: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 1,
+            },
+          },
+        ],
+        to_after_key_up: [
+          {
+            set_variable: {
+              name: "hyper",
+              value: 0,
+            },
+          },
+        ],
+        type: "basic",
+        conditions: [
+          {
+            type: "device_if",
+            identifiers: [
+              {
+                vendor_id: 7504,
+                product_id: 24926,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  // Laptop keyboard with Caps Lock to Hyper
+  {
+    description: "Laptop Keyboard - Hyper Key (Caps Lock)",
     manipulators: [
       {
         description: "Caps Lock -> Hyper Key",
@@ -37,22 +82,18 @@ const rules: KarabinerRules[] = [
           },
         ],
         type: "basic",
+        conditions: [
+          {
+            type: "device_unless",
+            identifiers: [
+              {
+                vendor_id: 7504,
+                product_id: 24926,
+              },
+            ],
+          },
+        ],
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
     ],
   },
   ...createHyperSubLayers({
