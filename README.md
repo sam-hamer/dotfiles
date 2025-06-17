@@ -43,11 +43,11 @@ brew install starship
 
 ### Zsh Plugins
 
-#### fzf
+#### Atuin
 
-https://github.com/junegunn/fzf
+https://atuin.sh/
 ```
-brew install fzf
+curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 ```
 
 #### zoxide
