@@ -1,7 +1,8 @@
 # ----- NVM Path -----
-# export NVM_DIR="$HOME/.nvm"
-# . "$(brew --prefix nvm)/nvm.sh"
-# source ~/.nvm/nvm.sh
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# ----- Homebrew Path -----
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ----- Load Plugins -----
 # Standard plugins can be found in $ZSH/plugins/
@@ -14,7 +15,7 @@ plugins=(git )
 eval "$(starship init zsh)"
 
 # ----- SDKMAN -----
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+# source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ----- FZF -----
 

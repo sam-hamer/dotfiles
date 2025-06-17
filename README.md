@@ -14,6 +14,14 @@ https://brew.sh/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+### nvm
+
+https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
 ### Git
 
 ```
@@ -40,6 +48,20 @@ brew install starship
 https://github.com/junegunn/fzf
 ```
 brew install fzf
+```
+
+#### zoxide
+
+https://github.com/ajeetdsouza/zoxide
+```
+brew install zoxide
+```
+
+#### eza
+
+https://github.com/eza-community/eza
+```
+brew install eza
 ```
 
 #### zsh-autosuggestions
@@ -79,7 +101,14 @@ then use GNU stow to create symlinks
 $ stow [insert folder name]
 ```
 
-## Other Software
+## Other Software and GUI Apps
+
+### 1Password
+
+https://www.1password.com/
+```
+brew install --cask 1password
+```
 
 ### Raycast
 
@@ -88,18 +117,25 @@ https://www.raycast.com/
 brew install --cask raycast
 ```
 
+### Zen
+
+https://zen-browser.app
+```
+brew install --cask zen
+```
+
 ### WezTerm
 
 https://github.com/wez/wezterm
 ```
-bbrew install --cask wezterm
+brew install --cask wezterm
 ```
 
-### Visual Studio Code
+### Cursor
 
-https://code.visualstudio.com/
+https://www.cursor.com
 ```
-brew install --cask visual-studio-code
+brew install --cask cursor
 ```
 
 ### Bartender 5
@@ -112,3 +148,62 @@ https://github.com/exelban/stats
 ```
 brew install --cask stats
 ```
+
+### BetterDisplay
+
+https://github.com/waydabber/BetterDisplay
+```
+brew install --cask betterdisplay
+```
+
+### Karabiner Elements
+
+https://karabiner-elements.pqrs.org/
+```
+brew install --cask karabiner-elements
+```
+
+### LinearMouse
+
+https://linearmouse.app/
+```
+brew install --cask linearmouse
+```
+
+### Obsidian
+
+https://obsidian.md/
+```
+brew install --cask obsidian
+```
+
+### TickTick
+
+https://www.ticktick.com/
+```
+brew install --cask ticktick
+```
+
+### Discord
+
+https://discord.com/
+```
+brew install --cask discord
+```
+
+## Browser Extensions and Settings
+- uBlock Origin
+- TamperMonkey
+    - userscript for twitch ads: https://github.com/pixeltris/TwitchAdSolutions?tab=readme-ov-file#scripts
+- SponsorBlock
+- 1Password
+
+## MacOS Specific Settings
+
+### Desktop & Dock
+- Hide Dock
+    ```
+    defaults write com.apple.dock autohide-delay -float 0.1; defaults write com.apple.dock autohide-time-modifier -float 0.1;killall Dock
+    ```
+- Disable Hot Corners
+
