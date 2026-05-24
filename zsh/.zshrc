@@ -47,3 +47,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+
+# SSH agent socket for Bitwarden
+export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
