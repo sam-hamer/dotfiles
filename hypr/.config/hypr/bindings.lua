@@ -9,6 +9,7 @@ local menu            = "rofi -show drun"
 local browser         = "zen-browser"
 local passwordManager = "bitwarden-desktop"
 local editor          = "code"
+local notes           = "obsidian"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -26,13 +27,16 @@ hl.bind(hyperMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(hyperMod .. " + C", hl.dsp.exec_cmd(editor))
 hl.bind(hyperMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(hyperMod .. " + slash", hl.dsp.exec_cmd(passwordManager))
+hl.bind(hyperMod .. " + N", hl.dsp.exec_cmd(notes))
 
--- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
+-- Window Management
 hl.bind(secondMod .. " + ESCAPE",
-    hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+    hl.dsp.exec_cmd("wlogout -b 2 -s -L 1200 -R 1200 -T 700 -B 700"))
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + Q", hl.dsp.window.kill())
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + C", hl.dsp.window.center())
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pkill waybar; waybar &"))
 
