@@ -8,16 +8,16 @@ local fileManager     = "dolphin"
 local menu            = "rofi -show drun"
 local browser         = "zen-browser"
 local passwordManager = "bitwarden-desktop"
-local editor          = "code"
+local editor          = "zeditor"
 local notes           = "obsidian"
 
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "SUPER"
-local secondMod = "SUPER + SHIFT"
-local hyperMod = "CTRL + SUPER + ALT"
+local mainMod         = "SUPER"
+local secondMod       = "SUPER + SHIFT"
+local hyperMod        = "CTRL + SUPER + ALT"
 
 -- Launch Applications
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
