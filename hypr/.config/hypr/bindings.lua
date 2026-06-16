@@ -20,7 +20,7 @@ local secondMod       = "SUPER + SHIFT"
 local hyperMod        = "CTRL + SUPER + ALT"
 
 -- Launch Applications
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
+hl.bind("ALT" .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(hyperMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(hyperMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(hyperMod .. " + B", hl.dsp.exec_cmd(browser))
