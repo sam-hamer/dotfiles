@@ -7,4 +7,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # ----- SSH Agent -----
-export SSH_AUTH_SOCK="$HOME/.bitwarden-ssh-agent.sock"
+export SSH_AUTH_SOCK="$HOME/.ssh/proton-pass-agent.sock"

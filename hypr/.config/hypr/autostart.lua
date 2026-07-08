@@ -7,11 +7,11 @@
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
-hl.on("hyprland.start", function ()
-  hl.exec_cmd("waybar")
-  hl.exec_cmd("dunst")
-  hl.exec_cmd("hyprpaper")
-  hl.exec_cmd("hypridle")
-  hl.exec_cmd("hyprpolkitagent")
-  hl.exec_cmd("bitwarden-desktop")
+hl.on("hyprland.start", function()
+    hl.exec_cmd("waybar")
+    hl.exec_cmd("dunst")
+    hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("hyprpolkitagent")
+    hl.exec_cmd("pass-cli ssh-agent daemon start")
 end)

@@ -29,6 +29,11 @@ hl.bind(hyperMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(hyperMod .. " + slash", hl.dsp.exec_cmd(passwordManager))
 hl.bind(hyperMod .. " + N", hl.dsp.exec_cmd(notes))
 
+-- Global Application Keybinds
+hl.bind("CTRL + SHIFT + M", hl.dsp.pass({ window = "class:^(discord)$" }), { description = "Toggle Discord mute" })
+hl.bind("CTRL + SHIFT + D", hl.dsp.pass({ window = "class:^(discord)$" }), { description = "Toggle Discord deafen" })
+hl.bind("CTRL + SHIFT + B", hl.dsp.pass({ window = "class:^(discord)$" }), { description = "Toggle Discord soundboard" })
+
 -- Window Management
 hl.bind(secondMod .. " + ESCAPE",
     hl.dsp.exec_cmd("wlogout -b 2 -s -L 1200 -R 1200 -T 700 -B 700"))
