@@ -1,16 +1,22 @@
-# ----- NVM Path -----
-export NVM_DIR="$HOME/.nvm"
-[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
-[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+source ~/.zprofile
 
-# ----- Homebrew Path -----
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# ----- OS detection -----
+if [[ "$OSTYPE" == darwin* ]]; then
+  OS="mac"
+elif [[ "$OSTYPE" == linux* ]]; then
+  OS="linux"
+else
+  OS="unknown"
+fi
+
+# ----- Homebrew Path (mac only) -----
+if [[ "$OS" == "mac" ]]; then
+  if [[ -x "/opt/homebrew/bin/brew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+fi
 
 # ----- Load Plugins -----
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git )
 
 # ---- Starship -----
@@ -23,31 +29,29 @@ eval "$(starship init zsh)"
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-# ---- TheFuck -----
-# thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
-
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-# ---- Eza (better ls) -----
+# ---- Eza (better ls) ----
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # ---- Syntax highlighting -----
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [[ "$OS" == "mac" ]]; then
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+else
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+# ---- Autosuggestions -----
+if [[ "$OS" == "mac" ]]; then
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+else
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 # Disable underline
 (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
-# ---- Autosuggestions -----
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-
-# opencode
-export PATH=/Users/samhamer/.opencode/bin:$PATH
