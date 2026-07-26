@@ -1,2 +1,2 @@
 shell-integration-features = ssh-terminfo,ssh-env
-font-size = 10
+font-family = JetBrainsMono Nerd Font
