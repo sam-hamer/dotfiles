@@ -1,2 +1,3 @@
 shell-integration-features = ssh-terminfo,ssh-env
 font-family = JetBrainsMono Nerd Font
+theme = noctalia
